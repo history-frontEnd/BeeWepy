@@ -94,9 +94,7 @@ const resp = await this.POST('http://www.baidu.com/userregistermodify', requestD
 
 解决方法：
 > `npm i util --no-save && wepy build --no-cache`
-
-https://github.com/Tencent/wepy/issues/1294
-不保存依赖,安装util,同时 不使用缓存构建
+https://github.com/Tencent/wepy/issues/1294 不保存依赖,安装util,同时 不使用缓存构建
 
 - 微信开发者工具打开dist运行时报TypeError: Cannot read property 'Promise' of undefined
 
