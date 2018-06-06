@@ -1,0 +1,33 @@
+<style lang="less">
+// global
+@import url(./less/iconfont.less);
+@import url(./less/base.less);
+</style>
+
+<script>
+import wepy from 'wepy';
+import 'wepy-async-function';
+import 'utils/injectObj';
+
+export default class extends wepy.app {
+  config = {
+    pages: ['pages/index'],
+    window: {
+      backgroundTextStyle: 'light',
+      navigationBarBackgroundColor: '#31D4DA',
+      navigationBarTitleText: '贝安康',
+      navigationBarTextStyle: '#FFFFFF'
+    }
+  };
+
+  globalData = {};
+
+  constructor() {
+    super();
+    this.use('requestfix');
+    this.use('promisify');
+  }
+
+  onLaunch() {}
+}
+</script>
