@@ -59,7 +59,8 @@ BeeWepy是基于[wepy](https://github.com/Tencent/wepy)的一套小程序开发�
 
 ## Api相关
 
-- 在`config/index.js`中定义是需要全局mock数据(isMock),也可以在特定的请求中覆盖,生产环境自动覆盖。isMock决定是否使用mock数据，当`isMock=true`时根据`src/mock/mockConfig.js`的设置获取mock数据，当`isMock=false`时会发送网络请求，并且请求体会删除`isMock`字段。
+- 在`config/index.js`中定义是否需要全局mock数据(isMock), 也可以在特定的请求中覆盖, 生产环境自动覆盖。
+  isMock决定是否使用mock数据，当`isMock=true`时根据`src/mock/mockConfig.js`的设置获取mock数据，当`isMock=false`时会发送网络请求，并且在请求中删除`isMock`参数。
 ```javascript
 let requestData = {
   isMock: false,
