@@ -92,7 +92,8 @@ const resp = await this.POST('http://www.baidu.com/userregistermodify', requestD
 
 - 使用wepy-cli 生成项目，运行后报: `Error: module "npm/lodash/_nodeUtil.js" is not defined`
 
-解决方法：`npm i util --no-save && wepy build --no-cache`
+解决方法：
+> `npm i util --no-save && wepy build --no-cache`
 
 https://github.com/Tencent/wepy/issues/1294
 不保存依赖,安装util,同时 不使用缓存构建
