@@ -2,16 +2,23 @@
 
 BeeWepy是基于[wepy](https://github.com/Tencent/wepy)的一套小程序开发模板，有一些方便的设置。
 
-## 几个约定：
+### ○ 几个约定：
 - 代码风格规范请使用 [JavaScript Standard Style](https://github.com/feross/standard)
 - Less mixins请使用 [lesshat](https://github.com/madebysource/lesshat#size)
 - 命名规范使用驼峰命名方式，且命名尽量能够顾名思义，如：变量名`userInfo`，方法名`getUserInfo`，类名、组件名`User`
 
-## 全局inject
+### ○ 安装
+
+1. Clone BeeWepy 仓库到本地；
+2. 安装依赖 `$ npm install`;
+3. 在 BeeWepy 根目录下执行 `$ wepy dev`，生成 dist/ 目录；
+4. 微信开发者工具 —— 新建一个小程序，目录指向生成的 dist/；
+
+### ○ 全局inject
 
 - $link: 注册为wepy.page的页面跳转方式
 ```javascript
-  this.$link('/page/line/itemDetail')
+  this.$link('/page/home/index')
 ```
 
 - $back: 返回上一页，非跳转
@@ -21,7 +28,7 @@ BeeWepy是基于[wepy](https://github.com/Tencent/wepy)的一套小程序开发�
 
 - $toast：吐司提示
 ```javascript
-  this.$toast('成功了')
+  this.$toast('吐司提示')
 ```
 
 - $loading：正在加载提示
@@ -47,16 +54,16 @@ BeeWepy是基于[wepy](https://github.com/Tencent/wepy)的一套小程序开发�
   this.$debug('消息')
 ```
 
-## Api相关
+### ○ Api相关
 
 - 在`config/index.js`中定义是否需要全局mock数据(isMock), 也可以在特定的请求中覆盖, 生产环境自动覆盖。
   isMock决定是否使用mock数据，当`isMock=true`时根据`src/mock/mockConfig.js`的设置获取mock数据，当`isMock=false`时会发送网络请求，并且在请求中删除`isMock`参数。
 ```javascript
 let requestData = {
   isMock: false,
-  mobile: this.monPhone
+  mobile: '110'
 }
-await this.POST('/userregistermodify', requestData)
+await this.POST('/login', requestData)
 ```
 
 - 不明确定义`usertoken`,请求中会默认带上localstorage中的`usertoken`,一般不需要自带`usertoken`
@@ -79,7 +86,7 @@ const resp = await this.POST('http://www.baidu.com/userregistermodify', requestD
 - 参数 `showToast`
 默认为`false`时, 调用`wepy.showNavigationBarLoading()`, 为`true`时, 调用`wepy.showLoading()`
 
-## 踩坑:
+### ○ 踩坑:
 
 - 使用wepy-cli 生成项目，运行后报: `Error: module "npm/lodash/_nodeUtil.js" is not defined`
 
@@ -96,6 +103,6 @@ const resp = await this.POST('http://www.baidu.com/userregistermodify', requestD
 微信开发者工具-->项目-->关闭代码压缩上传 重要：开启后，会导致真机`computed`, `props.sync` 等等属性失效。（参考[开发者工具编译报错](https://github.com/Tencent/wepy/issues/273)）
 
 
-## 相关文档：
+### ○ 相关文档：
 - [小程序开发文档](https://developers.weixin.qq.com/miniprogram/dev/)
 - [wepy文档](https://tencent.github.io/wepy/)
