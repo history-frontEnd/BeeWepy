@@ -70,17 +70,15 @@ await this.POST('/login', requestData)
 ```javascript
 let requestData = {
   usertoken: this.$parent.globalData.token
-  mobile: this.monPhone
+  mobile: '110'
 }
-await this.POST('/userregistermodify', requestData)
+await this.POST('/login', requestData)
 ```
 
 - 请求url以http或才https开头，不会拼接`domain`, mockConfig中定义key时使用全url
 ```javascript
-//url为 domain + /userregistermodify
-const resp = await this.POST('/userregistermodify', requestData)
-//url为 http://www.baidu.com/userregistermodify
-const resp = await this.POST('http://www.baidu.com/userregistermodify', requestData)
+await this.POST('/login', requestData) //url为 domain + /login
+await this.POST('http://www.baidu.com/login', requestData) //url为 http://www.baidu.com/login
 ```
 
 - 参数 `showToast`
