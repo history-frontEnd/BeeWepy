@@ -2,7 +2,7 @@
 
 BeeWepy是基于[wepy](https://github.com/Tencent/wepy)的一套小程序开发模板，有一些方便的设置。
 
-### ○ 几个约定：
+### ◆ 几个约定：
 - 代码风格规范请使用 [JavaScript Standard Style](https://github.com/feross/standard)
 - Less mixins请使用 [lesshat](https://github.com/madebysource/lesshat#size)
 - 命名规范使用驼峰命名方式，且命名尽量能够顾名思义，如：变量名`userInfo`，方法名`getUserInfo`，类名、组件名`User`
