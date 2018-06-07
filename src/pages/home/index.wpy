@@ -1,7 +1,5 @@
-<style lang="less">
-</style>
 <template>
-  <view class="container">
+  <view>
     <toast />
   </view>
 </template>
@@ -49,3 +47,5 @@ export default class Index extends wepy.page {
   }
 }
 </script>
+<style lang="less">
+</style>
