@@ -4,6 +4,7 @@ import { toast, deepCopy, loading, Debug } from 'utils';
 import db from 'utils/db';
 import wx from 'utils/wx';
 
+// 请根据项目实际情况修改
 let mockConfig = require('../mock/mockConfig');
 
 const GET = (url, params = {}, showToast = false, handler = {}) => {
@@ -98,15 +99,11 @@ const request = (method, url, params = {}, showToast = false, handler = {}) => {
   handler.data = params;
   handler.method = method;
   if (method === 'POST') {
-    handler.header['content-type'] =
-      'application/x-www-form-urlencoded; charset=UTF-8';
+    handler.header['content-type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
     handler.header['accept'] = 'application/json';
   }
   if (!isProd) {
-    if (
-      (params.isMock === undefined && isMock) ||
-      (!(params.isMock === undefined) && params.isMock)
-    ) {
+    if ( (params.isMock === undefined && isMock) || (!(params.isMock === undefined) && params.isMock)) {
       return Promise.resolve(require('../mock/' + mockConfig[handler.url]));
     }
   }
@@ -122,7 +119,7 @@ const request = (method, url, params = {}, showToast = false, handler = {}) => {
         resolve(res.data);
       } else {
         if (showToast) {
-          toast((res.data && res.data.message) || '网络错误', 'error');
+          toast((res.data && res.data.message) || '网络错误~', 'error');
         }
         Debug('response fail: ' + url + ' ==============================');
         Debug(res);

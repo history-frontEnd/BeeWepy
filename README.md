@@ -19,11 +19,6 @@ BeeWepy是基于[wepy](https://github.com/Tencent/wepy)的一套小程序开发�
   this.$back()
 ```
 
-- $track: 埋点(未实现)
-```javascript
-  this.$track('page_index_click?a=b')
-```
-
 - $toast：吐司提示
 ```javascript
   this.$toast('成功了')
@@ -38,11 +33,6 @@ BeeWepy是基于[wepy](https://github.com/Tencent/wepy)的一套小程序开发�
 - $modal: 模态框
 ```javascript
   let resp = await this.$modal('确定？', '子标题', true)
-```
-
-- $getSystemInfo: 获取用户手机信息
-```javascript
-  let resp = await this.$getSystemInfo()
 ```
 
 - $db: 同步方式获取以及设置storage
