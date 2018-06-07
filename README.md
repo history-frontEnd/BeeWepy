@@ -40,10 +40,10 @@ BeeWepy是基于[wepy](https://github.com/Tencent/wepy)的一套小程序模板�
 
 - $modal: 模态框
 ```javascript
-  let resp = await this.$modal('确定？', '子标题', true)
+  await this.$modal('确定？', '子标题', true)
 ```
 
-- $db: 同步方式获取以及设置storage
+- $db: 同步方式获取以及设置localstorage
 ```javascript
   this.$db.get('name')
   this.$db.set('name', '子标题')
