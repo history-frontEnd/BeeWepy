@@ -100,7 +100,17 @@ await this.POST('http://www.baidu.com/login', requestData) //url为 http://www.b
 微信开发者工具-->项目-->关闭上传代码时样式自动补全 重要：某些情况下漏掉此项会也会运行报错。
 微信开发者工具-->项目-->关闭代码压缩上传 重要：开启后，会导致真机`computed`, `props.sync` 等等属性失效。（参考[开发者工具编译报错](https://github.com/Tencent/wepy/issues/273)）
 
-
 ### ○ 相关文档：
 - [小程序开发文档](https://developers.weixin.qq.com/miniprogram/dev/)
 - [wepy文档](https://tencent.github.io/wepy/)
+
+### ○ 开源协议
+
+基于 [MIT](http://opensource.org/licenses/MIT) License，请自由的享受、参与开源。
+
+### ○ Contributing
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Added some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
