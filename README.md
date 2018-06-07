@@ -1,6 +1,6 @@
 # BeeWepy
 
-BeeWepy是基于[wepy](https://github.com/Tencent/wepy)的一套小程序开发模板，有一些方便的设置。
+BeeWepy是基于[wepy](https://github.com/Tencent/wepy)的一套小程序模板，有一些便捷的设置。
 
 ### ◆ 几个约定：
 - 代码风格规范请使用 [JavaScript Standard Style](https://github.com/feross/standard)
