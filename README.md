@@ -7,14 +7,14 @@ BeeWepy是基于[wepy](https://github.com/Tencent/wepy)的一套小程序开发�
 - Less mixins请使用 [lesshat](https://github.com/madebysource/lesshat#size)
 - 命名规范使用驼峰命名方式，且命名尽量能够顾名思义，如：变量名`userInfo`，方法名`getUserInfo`，类名、组件名`User`
 
-### ○ 安装
+### ◆ 安装
 
 1. Clone BeeWepy 仓库到本地；
 2. 安装依赖 `$ npm install`;
 3. 在 BeeWepy 根目录下执行 `$ wepy dev`，生成 dist/ 目录；
 4. 微信开发者工具 —— 新建一个小程序，目录指向生成的 dist/；
 
-### ○ 全局inject
+### ◆ 全局inject
 
 - $link: 注册为wepy.page的页面跳转方式
 ```javascript
@@ -54,7 +54,7 @@ BeeWepy是基于[wepy](https://github.com/Tencent/wepy)的一套小程序开发�
   this.$debug('消息')
 ```
 
-### ○ Api相关
+### ◆ Api相关
 
 - 在`config/index.js`中定义是否需要全局mock数据(isMock), 也可以在特定的请求中覆盖, 生产环境自动覆盖。
   isMock决定是否使用mock数据，当`isMock=true`时根据`src/mock/mockConfig.js`的设置获取mock数据，当`isMock=false`时会发送网络请求，并且在请求中删除`isMock`参数。
@@ -84,7 +84,7 @@ await this.POST('http://www.baidu.com/login', requestData) //url为 http://www.b
 - 参数 `showToast`
 默认为`false`时, 调用`wepy.showNavigationBarLoading()`, 为`true`时, 调用`wepy.showLoading()`
 
-### ○ 踩坑:
+### ◆ 踩坑:
 
 - 使用wepy-cli 生成项目，运行后报: `Error: module "npm/lodash/_nodeUtil.js" is not defined`
 
@@ -100,15 +100,15 @@ await this.POST('http://www.baidu.com/login', requestData) //url为 http://www.b
 微信开发者工具-->项目-->关闭上传代码时样式自动补全 重要：某些情况下漏掉此项会也会运行报错。
 微信开发者工具-->项目-->关闭代码压缩上传 重要：开启后，会导致真机`computed`, `props.sync` 等等属性失效。（参考[开发者工具编译报错](https://github.com/Tencent/wepy/issues/273)）
 
-### ○ 相关文档：
+### ◆ 相关文档：
 - [小程序开发文档](https://developers.weixin.qq.com/miniprogram/dev/)
 - [wepy文档](https://tencent.github.io/wepy/)
 
-### ○ 开源协议
+### ◆ 开源协议
 
 基于 [MIT](http://opensource.org/licenses/MIT) License，请自由的享受、参与开源。
 
-### ○ Contributing
+### ◆ Contributing
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Added some feature'`)
