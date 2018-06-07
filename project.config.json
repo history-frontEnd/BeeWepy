@@ -1,5 +1,5 @@
 {
-  "description": "wepy小程序基础模板",
+  "description": "wepy小程序模板",
   "setting": {
     "urlCheck": true,
     "es6": false,
@@ -7,7 +7,7 @@
     "minified": false
   },
   "compileType": "miniprogram",
-  "appid": "wxbff738f358f4390e",
+  "appid": "",
   "projectname": "BeeWepy",
   "miniprogramRoot": "./dist"
 }

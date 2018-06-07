@@ -1,7 +1,7 @@
 export const env = process.env.NODE_ENV === 'production' ? 'prod' : 'dev';
 const domains = {
-  dev: 'https://dev.cn', // 测试api接口
-  prod: 'https://prod.cn' // 正式api接口
+  dev: 'https://example.dev.cn', // 测试api接口
+  prod: 'https://example.prod.cn' // 正式api接口
 };
 
 // 小程序本地存储key的前缀

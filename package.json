@@ -1,7 +1,7 @@
 {
-  "name": "bee_wepy",
-  "version": "0.0.2",
-  "description": "wepy小程序基础模板",
+  "name": "BeeWepy",
+  "version": "1.0.0",
+  "description": "wepy小程序模板",
   "main": "dist/app.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development wepy build --watch",
@@ -10,16 +10,11 @@
     "clean": "find ./dist -maxdepth 1 -not -name 'project.config.json' -not -name 'dist' | xargs rm -rf",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "wepy": {
-    "module-a": false,
-    "./src/components/list": "./src/components/wepy-list.wpy"
-  },
   "author": "BioSan",
   "license": "MIT",
   "dependencies": {
     "wepy": "^1.6.0",
-    "wepy-async-function": "^1.4.4",
-    "wepy-com-toast": "^1.0.2"
+    "wepy-async-function": "^1.4.4"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.1",
