@@ -28,6 +28,18 @@ export function link(url) {
   });
 }
 
+export function redirect (url) {
+  wepy.redirectTo({
+    url: url
+  })
+}
+
+export function reLaunch (url) {
+  wepy.reLaunch({
+    url: url
+  })
+}
+
 export function back() {
   wepy.navigateBack({
     delta: 2
